@@ -114,8 +114,12 @@
 
               <a class="brand logofont" href="<?php echo home_url(); ?>/">
 
-                      <img src="../wp-content/themes/virtue/assets/img/OT_LOGO_Text_2_300.png" width="300" height="79" alt="Oceania Trade" />
+                     <?php global $virtue; if (!empty($virtue['x1_virtue_logo_upload']['url'])) { ?> <div id="thelogo"><img src="<?php echo $virtue['x1_virtue_logo_upload']['url']; ?>" alt="<?php  bloginfo('name');?>" class="kad-standard-logo" />
 
+                         <?php if(!empty($virtue['x2_virtue_logo_upload']['url'])) {?> <img src="<?php echo $virtue['x2_virtue_logo_upload']['url'];?>" class="kad-retina-logo" style="max-height:<?php echo $virtue['x1_virtue_logo_upload']['height'];?>px" /> <?php } ?>
+
+                        </div> <?php } else { bloginfo('name'); } ?>
+                        
                         </a>
 
               <?php if (isset($virtue['logo_below_text'])) { ?> <p class="kad_tagline belowlogo-text"><?php echo $virtue['logo_below_text']; ?></p> <?php }?>

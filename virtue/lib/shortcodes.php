@@ -13,7 +13,7 @@ function kad_sitename_shortcode_function() {
 }
 function kad_themecredit_shortcode_function() {
 	$my_theme = wp_get_theme();
-	$output = '- WordPress Theme by <a href="'.$my_theme->{'Author URI'}.'">Kadence Themes</a>';
+	$output = '- Powered by <a target="_blank" href="http://www.sitedisks.com.au">SiteDisks</a>';
 	return $output;
 }
 
